@@ -57,15 +57,10 @@
 	}
 
 	function importAnimationFromPath(banana){
-		//console.log(JSON.parse(fs.readFile(path)));
-		//Animator.loadFile(JSON.parse(fs.readFileSync(path)));
-		//Animator.loadFile(new File([banana], path.basename(banana)));
-		//Animator.importFile(path);
-
-		// Blockbench.read(banana, {readtype: "text", function(file){
-		// 	//debugger;
-		// 	Animator.loadFile(file);
-		// }})
+		Blockbench.read(banana, {readtype: "text"}, function(file){
+			//debugger;
+			Animator.loadFile(file[0]);
+		});
 	}
 
 	// Import files from the directory and subdirectories
