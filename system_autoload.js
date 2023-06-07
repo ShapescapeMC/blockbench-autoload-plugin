@@ -56,8 +56,8 @@
 
 	}
 
-	function importAnimationFromPath(banana){
-		Blockbench.read(banana, {readtype: "text"}, function(file){
+	function importAnimationFromPath(animation_path){
+		Blockbench.read(animation_path, { readtype: "text" }, function (file) {
 			//debugger;
 			Animator.loadFile(file[0]);
 		});
