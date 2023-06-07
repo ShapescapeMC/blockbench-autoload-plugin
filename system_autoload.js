@@ -49,7 +49,7 @@
 
 	// Import a texture from the specified path and handle the loading callback
 	function importTextureFromPath(path) {
-		console.log("[SYSTEM AUTLOAD] ", path)
+		console.log("[SYSTEM AUTLOAD] Loading Texture from: \n", path)
 		new Texture().fromPath(path).add(false); // Create a new Texture object from the specified path
 
 		Canvas.updateLayeredTextures();
@@ -57,8 +57,8 @@
 	}
 
 	function importAnimationFromPath(animation_path){
+		console.log("[SYSTEM AUTOLOAD] Loading Animation from: \n", animation_path);
 		Blockbench.read(animation_path, { readtype: "text" }, function (file) {
-			//debugger;
 			Animator.loadFile(file[0]);
 		});
 	}
@@ -82,12 +82,12 @@
 
 	// Register the plugin
 	BBPlugin.register("system_autoload", {
-		title: "System Autoload",
+		title: "System File Loader",
 		author: "Shapescape",
 		icon: "fas.fa-truck-ramp-box",
 		description:
-			"Automatically loading relevant files when opening a .geo file from a system_template system.",
-		version: "0.0.2",
+			"Adding a button which loads animation and png files from same directory/subdirectories of the loaded geometry file.",
+		version: "1.0.0",
 		variant: "desktop",
 		onload() {
 			// Create an import button action
