@@ -40,3 +40,8 @@ To install the plugin from a file, follow these steps:
         - small_chair.animation.json
         - small_chair.png                        
 ```
+
+## Keybind
+1. Go to File -> Preferences -> Keybindings...
+2. Search for Load Files From System
+3. Set your keybind for that
